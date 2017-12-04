@@ -217,7 +217,7 @@
                             sizesPropertyExists = !!$attrs.vsSize || !!$attrs.vsSizeProperty,
                             $scrollParent = $attrs.vsScrollParent ?
                                 $attrs.vsScrollParent === 'window' ? angular.element(window) :
-                                closestElement.call(repeatContainer, $attrs.vsScrollParent) : repeatContainer,
+                                angular.element(closestElement.call(repeatContainer, $attrs.vsScrollParent)) : repeatContainer,
                             $$options = 'vsOptions' in $attrs ? $scope.$eval($attrs.vsOptions) : {},
                             clientSize = $$horizontal ? 'clientWidth' : 'clientHeight',
                             offsetSize = $$horizontal ? 'offsetWidth' : 'offsetHeight',
